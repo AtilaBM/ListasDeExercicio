@@ -17,4 +17,5 @@ int main()
 
     printf("The number 1(%d) to the power of number 2(%d) is %.2f \n", n1, n2, pow(n1, n2));
     printf("The number 2(%d) to the power of number 1(%d) is %.2f \n", n2, n1, pow(n2, n1));
+    return 0;
 }
