@@ -1,20 +1,20 @@
 #include <stdio.h>
 
 int main(){
-    int n1,n2,n3;
+    float n1,n2,n3;
 
-    printf("Ensira 3 numeros inteiros \n");
+    printf("Ensira 3 notas \n");
 
     printf("Valor n1: ");
-    scanf("%d",&n1);
+    scanf("%f",&n1);
     printf("Valor n2: ");
-    scanf("%d",&n2);
+    scanf("%f",&n2);
     printf("Valor n3: ");
-    scanf("%d",&n3);
+    scanf("%f",&n3);
 
-    float media = (float)(n1+n2+n3)/3;
+    float media = (n1+n2+n3)/3;
 
-    printf("A media dos 3 valores é %.2f \n",media);
+    printf("A media dos 3 valores e %.2f \n",media);
 
     return 0;
 }
