@@ -1,0 +1,27 @@
+name: C Program CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile C program
+        run: gcc -Wall -Wextra -o program main.c
+
+      - name: Run the program
+        run: ./program
+
+      - name: Upload executable
+        uses: actions/upload-artifact@v4
+        with:
+          name: program
+          path: program
