@@ -13,7 +13,7 @@ int main()
     printf("Insert the amount of food for each cat(grams): ");
     scanf("%f", &amountFood);
 
-    float amountFood5days = ((amountFood * 2) * 5) / 1000;
+    float amountFood5days = ((amountFood * 2) * days) / 1000;
     // float kgToGram = petFood/1000;
     float remainFood = petFood - amountFood5days;
     printf("-------------------------------\n");
