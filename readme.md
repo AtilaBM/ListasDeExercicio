@@ -29,7 +29,7 @@ gcc nome_do_arquivo.c -o nome_do_executavel
 **Nota importante:** Para exercícios que utilizam a biblioteca `math.h`, é necessário adicionar a flag `-lm` para linkar com a biblioteca matemática:
 
 ```bash
-gcc nome_do_arquivo.c -lm -o nome_do_executavel
+gcc nome_do_arquivo.c -o nome_do_executavel -lm
 ./nome_do_executavel
 ```
 
