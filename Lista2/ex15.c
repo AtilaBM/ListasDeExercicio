@@ -3,46 +3,46 @@
 int main()
 {
 
-    int hoursWorked, overtime, depedents, bonus;
-    float salary, minimumWage, irrf, netSalary, depedentsValue, overtimeValue, grossSalary;
+    int horasTrabalhadas, horasExtras, dependentes, bonus;
+    float salario, salarioMinimo, irrf, salarioLiquido, valorDependentes, valorHorasExtras, salarioBruto;
 
-    printf("=================Insert the values for Minimum wage, Hours Worked, Overtime and depedents.\n");
-    printf("Minimum Wage: ");
-    scanf("%f", &minimumWage);
-    printf("Hours Worked: ");
-    scanf("%d", &hoursWorked);
-    printf("Overtime: ");
-    scanf("%d", &overtime);
-    printf("Depedents: ");
-    scanf("%d", &depedents);
+    printf("=================Insira os valores para Salário Mínimo, Horas Trabalhadas, Horas Extras e Dependentes.\n");
+    printf("Salário Mínimo: ");
+    scanf("%f", &salarioMinimo);
+    printf("Horas Trabalhadas: ");
+    scanf("%d", &horasTrabalhadas);
+    printf("Horas Extras: ");
+    scanf("%d", &horasExtras);
+    printf("Dependentes: ");
+    scanf("%d", &dependentes);
 
-    float hourValue = minimumWage * 0.2;
+    float valorHora = salarioMinimo * 0.2;
 
-    salary = hoursWorked * hourValue;
+    salario = horasTrabalhadas * valorHora;
 
-    depedentsValue = depedents * 32;
+    valorDependentes = dependentes * 32;
 
-    overtimeValue = hourValue + (hourValue * 0.5);
+    valorHorasExtras = horasExtras * (valorHora + (valorHora * 0.5));
 
-    grossSalary = salary + depedentsValue + overtimeValue;
+    salarioBruto = salario + valorDependentes + valorHorasExtras;
 
-    if (grossSalary < 200.00)
+    if (salarioBruto < 200.00)
     {
         irrf = 0;
-        netSalary = grossSalary - (grossSalary * irrf);
+        salarioLiquido = salarioBruto - (salarioBruto * irrf);
     }
-    else if (grossSalary >= 200.00 && grossSalary <= 500.00)
+    else if (salarioBruto >= 200.00 && salarioBruto <= 500.00)
     {
         irrf = 0.1;
-        netSalary = grossSalary - (grossSalary * irrf);
+        salarioLiquido = salarioBruto - (salarioBruto * irrf);
     }
     else
     {
         irrf = 0.2;
-        netSalary = grossSalary - (grossSalary * irrf);
+        salarioLiquido = salarioBruto - (salarioBruto * irrf);
     }
 
-    if (netSalary <= 350.00)
+    if (salarioLiquido <= 350.00)
     {
         bonus = 100;
     }
@@ -51,7 +51,7 @@ int main()
         bonus = 50;
     }
 
-    printf("Your net salary is $%.2f\n", netSalary);
+    printf("Seu salário líquido é R$%.2f\n", salarioLiquido);
 
     return 0;
 }

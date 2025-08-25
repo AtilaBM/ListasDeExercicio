@@ -2,40 +2,40 @@
 
 int main()
 {
-    float salary, salaryBonus, newSalary, schoolAssistance;
+    float salario, salario_bonus, novo_salario, auxilio_escolar;
 
-    printf("===============Insert your salary=============== \n");
-    printf("Salary: ");
-    scanf("%f", &salary);
+    printf("===============Insira seu salário=============== \n");
+    printf("Salário: ");
+    scanf("%f", &salario);
 
-    if (salary <= 600.00)
+    if (salario <= 600.00)
     {
-        schoolAssistance = 150;
+        auxilio_escolar = 150;
     }
     else
     {
-        schoolAssistance = 100;
+        auxilio_escolar = 100;
     }
 
-    if (salary <= 500.00)
+    if (salario <= 500.00)
     {
-        salaryBonus = salary * 0.05;
-        newSalary = salary + salaryBonus + schoolAssistance;
-        printf("Your new salary is $%.2f\n", newSalary);
+        salario_bonus = salario * 0.05;
+        novo_salario = salario + salario_bonus + auxilio_escolar;
+        printf("Seu novo salário é R$%.2f\n", novo_salario);
     }
-    else if (salary > 500.00 && salary <= 1200.00)
+    else if (salario > 500.00 && salario <= 1200.00)
     {
-        salaryBonus = salary * 0.12;
+        salario_bonus = salario * 0.12;
 
-        newSalary = salary + salaryBonus + schoolAssistance;
-        printf("Your new salary is $%.2f\n", newSalary);
+        novo_salario = salario + salario_bonus + auxilio_escolar;
+        printf("Seu novo salário é R$%.2f\n", novo_salario);
     }
     else
     {
 
-        newSalary = salary + schoolAssistance;
+        novo_salario = salario + auxilio_escolar;
 
-        printf("Your new salary is $%.2f\n", newSalary);
+        printf("Seu novo salário é R$%.2f\n", novo_salario);
     }
 
     return 0;

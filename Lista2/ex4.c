@@ -2,40 +2,40 @@
 
 int main()
 {
-    float number1, number2, number3, temp;
+    float numero1, numero2, numero3, temp;
 
-    printf("Insert 3 numbers: \n");
+    printf("Insira 3 números: \n");
     printf("===================\n");
 
-    printf("Insert number 1: ");
-    scanf("%f", &number1);
+    printf("Insira o número 1: ");
+    scanf("%f", &numero1);
 
-    printf("Insert number 2: ");
-    scanf("%f", &number2);
+    printf("Insira o número 2: ");
+    scanf("%f", &numero2);
 
-    printf("Insert number 3: ");
-    scanf("%f", &number3);
+    printf("Insira o número 3: ");
+    scanf("%f", &numero3);
     printf("===================\n");
 
-    if (number1 > number2)
+    if (numero1 > numero2)
     {
-        temp = number1;
-        number1 = number2;
-        number2 = temp;
+        temp = numero1;
+        numero1 = numero2;
+        numero2 = temp;
     }
-    if (number2 > number3)
+    if (numero2 > numero3)
     {
-        temp = number2;
-        number2 = number3;
-        number3 = temp;
+        temp = numero2;
+        numero2 = numero3;
+        numero3 = temp;
     }
-    if (number1 > number2)
+    if (numero1 > numero2)
     {
-        temp = number1;
-        number1 = number2;
-        number2 = temp;
+        temp = numero1;
+        numero1 = numero2;
+        numero2 = temp;
     }
     printf("===================\n");
-    printf("In ascending order: %.1f || %.1f || %.1f\n", number1, number2, number3);
+    printf("Em ordem crescente: %.1f || %.1f || %.1f\n", numero1, numero2, numero3);
     return 0;
 }

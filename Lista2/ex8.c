@@ -3,41 +3,41 @@
 
 int main()
 {
-    int op;
+    int opcao;
 
-    printf("========Choose an option=========\n");
+    printf("========Escolha uma opção=========\n");
 
-    printf("Option 1: Sum two numbers \n");
-    printf("Option 2: Square root \n");
+    printf("Opção 1: Somar dois números \n");
+    printf("Opção 2: Raiz quadrada \n");
     printf("======================================\n");
-    printf("Option: ");
-    scanf("%d", &op);
+    printf("Opção: ");
+    scanf("%d", &opcao);
     printf("======================================\n");
 
-    switch (op)
+    switch (opcao)
     {
     case 1:
-        float number1, number2;
+        float numero1, numero2;
 
-        printf("Insert the first number: ");
-        scanf("%f", &number1);
-        printf("Insert the second number: ");
-        scanf("%f", &number2);
+        printf("Insira o primeiro número: ");
+        scanf("%f", &numero1);
+        printf("Insira o segundo número: ");
+        scanf("%f", &numero2);
 
-        printf("The sum is: %.2f \n", number1 + number2);
+        printf("A soma é: %.2f \n", numero1 + numero2);
         break;
 
     case 2:
-        float number;
+        float numero;
 
-        printf("Insert a number: ");
-        scanf("%f", &number);
-        printf("The square root is : %.2f \n", sqrt(number));
+        printf("Insira um número: ");
+        scanf("%f", &numero);
+        printf("A raiz quadrada é : %.2f \n", sqrt(numero));
 
         break;
 
     default:
-        printf("INVALID OPTION!\n");
+        printf("OPÇÃO INVÁLIDA!\n");
         break;
     }
 }

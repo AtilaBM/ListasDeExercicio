@@ -2,31 +2,31 @@
 
 int main()
 {
-    float grade1, grade2, grade3, average;
+    float nota1, nota2, nota3, media;
 
-    printf("Insert the values for grade 1, grade 2 and grade 3\n");
+    printf("Insira os valores para nota 1, nota 2 e nota 3\n");
     printf("==========================\n");
 
-    printf("Enter the grade 1 value: ");
-    scanf("%f", &grade1);
+    printf("Digite o valor da nota 1: ");
+    scanf("%f", &nota1);
 
-    printf("Enter the grade 2 value: ");
-    scanf("%f", &grade2);
+    printf("Digite o valor da nota 2: ");
+    scanf("%f", &nota2);
 
-    printf("Enter the grade 3 value: ");
-    scanf("%f", &grade3);
+    printf("Digite o valor da nota 3: ");
+    scanf("%f", &nota3);
 
-    average = (grade1 + grade2 + grade3) / 3;
+    media = (nota1 + nota2 + nota3) / 3;
 
     printf("==========================\n");
 
-    if (average >= 0.0 && average <= 2.99)
-        printf("You failed\n");
-    else if (average >= 3.0 && average <= 6.99)
-        printf("You must retake the test\n");
+    if (media >= 0.0 && media <= 2.99)
+        printf("Você foi reprovado\n");
+    else if (media >= 3.0 && media <= 6.99)
+        printf("Você deverá fazer prova de recuperação\n");
     else
     {
-        printf("You are approved\n");
+        printf("Você foi aprovado\n");
     }
 
     printf("==========================\n");

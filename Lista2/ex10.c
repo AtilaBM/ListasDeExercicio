@@ -3,52 +3,52 @@
 
 int main()
 {
-    int day1, month1, year1;
-    int day2, month2, year2;
-    time_t date1, date2;
+    int dia1, mes1, ano1;
+    int dia2, mes2, ano2;
+    time_t data1, data2;
     struct tm tm1 = {0}, tm2 = {0};
 
-    printf("Enter the first date:\n");
-    printf("Day: ");
-    scanf("%d", &day1);
-    printf("Month: ");
-    scanf("%d", &month1);
-    printf("Year: ");
-    scanf("%d", &year1);
+    printf("Insira a primeira data:\n");
+    printf("Dia: ");
+    scanf("%d", &dia1);
+    printf("Mês: ");
+    scanf("%d", &mes1);
+    printf("Ano: ");
+    scanf("%d", &ano1);
 
-    printf("\nEnter the second date:\n");
-    printf("Day: ");
-    scanf("%d", &day2);
-    printf("Month: ");
-    scanf("%d", &month2);
-    printf("Year: ");
-    scanf("%d", &year2);
+    printf("\nInsira a segunda data:\n");
+    printf("Dia: ");
+    scanf("%d", &dia2);
+    printf("Mês: ");
+    scanf("%d", &mes2);
+    printf("Ano: ");
+    scanf("%d", &ano2);
 
-    tm1.tm_mday = day1;
-    tm1.tm_mon = month1 - 1;
-    tm1.tm_year = year1 - 1900;
+    tm1.tm_mday = dia1;
+    tm1.tm_mon = mes1 - 1;
+    tm1.tm_year = ano1 - 1900;
 
-    tm2.tm_mday = day2;
-    tm2.tm_mon = month2 - 1;
-    tm2.tm_year = year2 - 1900;
+    tm2.tm_mday = dia2;
+    tm2.tm_mon = mes2 - 1;
+    tm2.tm_year = ano2 - 1900;
 
-    date1 = mktime(&tm1);
-    date2 = mktime(&tm2);
+    data1 = mktime(&tm1);
+    data2 = mktime(&tm2);
 
-    printf("\nFirst date: %02d/%02d/%d\n", day1, month1, year1);
-    printf("Second date: %02d/%02d/%d\n", day2, month2, year2);
+    printf("\nPrimeira data: %02d/%02d/%d\n", dia1, mes1, ano1);
+    printf("Segunda data: %02d/%02d/%d\n", dia2, mes2, ano2);
 
-    if (date1 > date2)
+    if (data1 > data2)
     {
-        printf("\nThe chronologically larger date is: %02d/%02d/%d\n", day1, month1, year1);
+        printf("\nA data cronologicamente maior é: %02d/%02d/%d\n", dia1, mes1, ano1);
     }
-    else if (date1 < date2)
+    else if (data1 < data2)
     {
-        printf("\nThe chronologically larger date is: %02d/%02d/%d\n", day2, month2, year2);
+        printf("\nA data cronologicamente maior é: %02d/%02d/%d\n", dia2, mes2, ano2);
     }
     else
     {
-        printf("\nBoth dates are equal!\n");
+        printf("\nAs duas datas são iguais!\n");
     }
 
     return 0;

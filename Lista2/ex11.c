@@ -2,41 +2,41 @@
 
 int main()
 {
-    int start_hour, start_minute;
-    int end_hour, end_minute;
-    int start_total_min, end_total_min;
-    int duration_min, duration_hours, duration_minutes;
+    int hora_inicio, minuto_inicio;
+    int hora_fim, minuto_fim;
+    int total_min_inicio, total_min_fim;
+    int duracao_min, duracao_horas, duracao_minutos;
 
-    printf("Enter start time:\n");
-    printf("Hour: ");
-    scanf("%d", &start_hour);
-    printf("Minute: ");
-    scanf("%d", &start_minute);
+    printf("Informe o horário de início:\n");
+    printf("Hora: ");
+    scanf("%d", &hora_inicio);
+    printf("Minuto: ");
+    scanf("%d", &minuto_inicio);
 
-    printf("\nEnter end time:\n");
-    printf("Hour: ");
-    scanf("%d", &end_hour);
-    printf("Minute: ");
-    scanf("%d", &end_minute);
+    printf("\nInforme o horário de término:\n");
+    printf("Hora: ");
+    scanf("%d", &hora_fim);
+    printf("Minuto: ");
+    scanf("%d", &minuto_fim);
 
-    start_total_min = start_hour * 60 + start_minute;
-    end_total_min = end_hour * 60 + end_minute;
+    total_min_inicio = hora_inicio * 60 + minuto_inicio;
+    total_min_fim = hora_fim * 60 + minuto_fim;
 
-    if (end_total_min >= start_total_min)
+    if (total_min_fim >= total_min_inicio)
     {
-        duration_min = end_total_min - start_total_min;
+        duracao_min = total_min_fim - total_min_inicio;
     }
     else
     {
-        duration_min = (24 * 60) - start_total_min + end_total_min;
+        duracao_min = (24 * 60) - total_min_inicio + total_min_fim;
     }
 
-    duration_hours = duration_min / 60;
-    duration_minutes = duration_min % 60;
+    duracao_horas = duracao_min / 60;
+    duracao_minutos = duracao_min % 60;
 
-    printf("\nGame start: %02d:%02d\n", start_hour, start_minute);
-    printf("Game end: %02d:%02d\n", end_hour, end_minute);
-    printf("Game duration: %d hours and %d minutes\n", duration_hours, duration_minutes);
+    printf("\nInício do jogo: %02d:%02d\n", hora_inicio, minuto_inicio);
+    printf("Término do jogo: %02d:%02d\n", hora_fim, minuto_fim);
+    printf("Duração do jogo: %d horas e %d minutos\n", duracao_horas, duracao_minutos);
 
     return 0;
 }

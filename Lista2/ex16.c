@@ -2,33 +2,33 @@
 
 int main()
 {
-    float currentPrice, monthlyAverageSales, increase, newPrice;
+    float precoAtual, mediaVendasMensal, aumento, novoPreco;
 
-    printf("===Insert the values for current price and monthly average sales===\n");
+    printf("===Insira os valores para preço atual e média mensal de vendas===\n");
 
-    printf("Current Price: ");
-    scanf("%f", &currentPrice);
+    printf("Preço atual: ");
+    scanf("%f", &precoAtual);
 
-    printf("Monthly average sales: ");
-    scanf("%f", &monthlyAverageSales);
+    printf("Média mensal de vendas: ");
+    scanf("%f", &mediaVendasMensal);
 
-    if (monthlyAverageSales < 500 && currentPrice < 30.00)
+    if (mediaVendasMensal < 500 || precoAtual < 30.00)
     {
-        increase = 0.1;
-        newPrice = currentPrice + (currentPrice * increase);
-        printf("The new price is $%.2f\n", newPrice);
+        aumento = 0.1;
+        novoPreco = precoAtual + (precoAtual * aumento);
+        printf("O novo preço é R$%.2f\n", novoPreco);
     }
-    else if ((monthlyAverageSales >= 500 && monthlyAverageSales < 1200) && (currentPrice >= 30.00 && currentPrice < 80.00))
+    else if ((mediaVendasMensal >= 500 && mediaVendasMensal < 1200) || (precoAtual >= 30.00 && precoAtual < 80.00))
     {
-        increase = 0.15;
-        newPrice = currentPrice + (currentPrice * increase);
-        printf("The new price is $%.2f\n", newPrice);
+        aumento = 0.15;
+        novoPreco = precoAtual + (precoAtual * aumento);
+        printf("O novo preço é R$%.2f\n", novoPreco);
     }
     else
     {
-        float decrease = 0.2;
-        newPrice = currentPrice - (currentPrice * decrease);
-        printf("The new price is $%.2f\n", newPrice);
+        float reducao = 0.2;
+        novoPreco = precoAtual - (precoAtual * reducao);
+        printf("O novo preço é R$%.2f\n", novoPreco);
     }
 
     return 0;

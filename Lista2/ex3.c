@@ -2,20 +2,20 @@
 
 int main()
 {
-    float number1, number2;
+    float numero1, numero2;
 
-    printf("Insert 2 numbers: \n");
+    printf("Insira 2 números: \n");
     printf("===================\n");
 
-    printf("Insert number 1: ");
-    scanf("%f", &number1);
+    printf("Insira o número 1: ");
+    scanf("%f", &numero1);
 
-    printf("Insert number 2: ");
-    scanf("%f", &number2);
+    printf("Insira o número 2: ");
+    scanf("%f", &numero2);
     printf("===================\n");
 
-    (number1 > number2) ? printf("%.2f is greater than %.2f\n", number1, number2)
-                        : printf("%.2f is greater than %.2f\n", number2, number1);
+    (numero1 > numero2) ? printf("%.2f é maior que %.2f\n", numero1, numero2)
+                        : printf("%.2f é maior que %.2f\n", numero2, numero1);
 
     printf("===================\n");
 

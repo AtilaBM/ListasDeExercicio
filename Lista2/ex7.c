@@ -5,22 +5,22 @@ int main()
     int op;
     float a, b, c, temp;
 
-    printf("========Insert 3 numbers=========\n");
+    printf("========Insira 3 números=========\n");
 
-    printf("First number: ");
+    printf("Primeiro número: ");
     scanf("%f", &a);
-    printf("Second number: ");
+    printf("Segundo número: ");
     scanf("%f", &b);
-    printf("Third number: ");
+    printf("Terceiro número: ");
     scanf("%f", &c);
 
-    printf("========Choose an option=========\n");
+    printf("========Escolha uma opção=========\n");
 
-    printf("Option 1: the three numbers in ascending order \n");
-    printf("Option 2: the three numbers in descending order \n");
-    printf("Option 3: the largest number stays between the other two numbers\n");
+    printf("Opção 1: os três números em ordem crescente \n");
+    printf("Opção 2: os três números em ordem decrescente \n");
+    printf("Opção 3: o maior número fica entre os outros dois\n");
     printf("======================================\n");
-    printf("Option: ");
+    printf("Opção: ");
     scanf("%d", &op);
     printf("======================================\n");
 
@@ -46,7 +46,7 @@ int main()
             b = temp;
         }
 
-        printf("The numbers in ascending order: %.2f || %.2f || %.2f\n", a, b, c);
+        printf("Os números em ordem crescente: %.2f || %.2f || %.2f\n", a, b, c);
         break;
 
     case 2:
@@ -68,7 +68,7 @@ int main()
             a = b;
             b = temp;
         }
-        printf("The numbers in descending order: %.2f || %.2f || %.2f\n", a, b, c);
+        printf("Os números em ordem decrescente: %.2f || %.2f || %.2f\n", a, b, c);
 
         break;
 
@@ -97,13 +97,12 @@ int main()
             b = c;
             c = temp;
         }
-        printf("The largest number (%.2f) between the others: %.2f || %.2f || %.2f\n",b, a, b, c);
-        
-        
+        printf("O maior número (%.2f) entre os outros: %.2f || %.2f || %.2f\n", b, a, b, c);
+
         break;
 
     default:
-        printf("INVALID OPTION!\n");
+        printf("OPÇÃO INVÁLIDA!\n");
         break;
     }
 }

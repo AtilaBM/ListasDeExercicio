@@ -2,17 +2,17 @@
 
 int main()
 {
-    int number;
+    int numero;
 
-    printf("Insert a number: \n");
+    printf("Insira um número: \n");
     printf("===================\n");
 
-    printf("Insert number: ");
-    scanf("%d", &number);
+    printf("Insira um número: ");
+    scanf("%d", &numero);
     printf("===================\n");
 
-    (number % 2 == 0) ? printf("%d is even \n", number)
-                        : printf("%d is odd\n", number);
+    (numero % 2 == 0) ? printf("%d é par \n", numero)
+                        : printf("%d é ímpar\n", numero);
 
     printf("===================\n");
 

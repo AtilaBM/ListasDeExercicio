@@ -2,63 +2,63 @@
 
 int main()
 {
-    float number1, number2, number3,number4, temp;
+    float numero1, numero2, numero3, numero4, temp;
 
-    printf("Insert 3 numbers in ascending order but the last one: \n");
+    printf("Insira 4 números (os 3 primeiros em ordem crescente, o último qualquer): \n");
     printf("===================\n");
 
-    printf("Insert number 1: ");
-    scanf("%f", &number1);
+    printf("Insira o número 1: ");
+    scanf("%f", &numero1);
 
-    printf("Insert number 2: ");
-    scanf("%f", &number2);
+    printf("Insira o número 2: ");
+    scanf("%f", &numero2);
 
-    printf("Insert number 3: ");
-    scanf("%f", &number3);
+    printf("Insira o número 3: ");
+    scanf("%f", &numero3);
 
-    printf("Insert number 4: ");
-    scanf("%f", &number4);
+    printf("Insira o número 4: ");
+    scanf("%f", &numero4);
     printf("===================\n");
 
-    if (number1 < number2)
+    if (numero1 < numero2)
     {
-        temp = number1;
-        number1 = number2;
-        number2 = temp;
+        temp = numero1;
+        numero1 = numero2;
+        numero2 = temp;
     }
-    if (number2 < number3)
+    if (numero2 < numero3)
     {
-        temp = number2;
-        number2 = number3;
-        number3 = temp;
+        temp = numero2;
+        numero2 = numero3;
+        numero3 = temp;
     }
-    if (number3 < number4)
+    if (numero3 < numero4)
     {
-        temp = number3;
-        number3 = number4;
-        number4 = temp;
+        temp = numero3;
+        numero3 = numero4;
+        numero4 = temp;
     }
 
 
-     if (number1 < number2)
+     if (numero1 < numero2)
     {
-        temp = number1;
-        number1 = number2;
-        number2 = temp;
+        temp = numero1;
+        numero1 = numero2;
+        numero2 = temp;
     }
-    if (number2 < number3)
+    if (numero2 < numero3)
     {
-        temp = number2;
-        number2 = number3;
-        number3 = temp;
+        temp = numero2;
+        numero2 = numero3;
+        numero3 = temp;
     }
-    if (number1 < number2)
+    if (numero1 < numero2)
     {
-        temp = number1;
-        number1 = number2;
-        number2 = temp;
+        temp = numero1;
+        numero1 = numero2;
+        numero2 = temp;
     }
     printf("===================\n");
-    printf("In descending order: %.1f || %.1f || %.1f || %.1f\n", number1, number2, number3,number4);
+    printf("Em ordem decrescente: %.1f || %.1f || %.1f || %.1f\n", numero1, numero2, numero3, numero4);
     return 0;
 }

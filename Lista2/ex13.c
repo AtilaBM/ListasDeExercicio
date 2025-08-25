@@ -2,84 +2,84 @@
 
 int main()
 {
-    int code;
-    float salary, newSalary;
+    int codigo;
+    float salario, novo_salario;
 
-    printf("===============Choose a code=============== \n");
+    printf("===============Escolha um código=============== \n");
 
-    printf("1 - Taxes\n");
-    printf("2 - New Salary\n");
-    printf("3 - Category\n");
-    printf("Insert the code: ");
-    scanf("%d", &code);
+    printf("1 - Impostos\n");
+    printf("2 - Novo Salário\n");
+    printf("3 - Categoria\n");
+    printf("Insira o código: ");
+    scanf("%d", &codigo);
     printf("\n\n");
 
-    switch (code)
+    switch (codigo)
     {
     case 1:
-        printf("===============Insert your salary=============== \n");
-        printf("Salary: ");
-        scanf("%f", &salary);
+        printf("===============Insira seu salário=============== \n");
+        printf("Salário: ");
+        scanf("%f", &salario);
 
-        if (salary < 500.00)
+        if (salario < 500.00)
         {
-            salary = salary - (salary * 0.05);
-            printf("Your salary after tax is $%.2f\n", salary);
+            salario = salario - (salario * 0.05);
+            printf("Seu salário após imposto é R$%.2f\n", salario);
         }
-        else if (salary >= 500.00 && salary <= 850.00)
+        else if (salario >= 500.00 && salario <= 850.00)
         {
-            salary = salary - (salary * 0.1);
+            salario = salario - (salario * 0.1);
 
-            printf("Your salary after tax is $%.2f\n", salary);
+            printf("Seu salário após imposto é R$%.2f\n", salario);
         }
         else
         {
-            printf("Your salary after tax is $%.2f\n", salary - (salary * 0.15));
+            printf("Seu salário após imposto é R$%.2f\n", salario - (salario * 0.15));
         }
 
         break;
     case 2:
-        printf("===============Insert your salary=============== \n");
-        printf("Salary: ");
-        scanf("%f", &salary);
+        printf("===============Insira seu salário=============== \n");
+        printf("Salário: ");
+        scanf("%f", &salario);
 
-        if (salary > 1500.00)
+        if (salario > 1500.00)
         {
-            printf("Your new salary is $%.2f\n", salary + 25);
+            printf("Seu novo salário é R$%.2f\n", salario + 25);
         }
-        else if (salary > 750.00 && salary <= 1500.00)
+        else if (salario > 750.00 && salario <= 1500.00)
         {
 
-            printf("Your new salary is $%.2f\n", salary + 50);
+            printf("Seu novo salário é R$%.2f\n", salario + 50);
         }
-        else if (salary >= 450.00 && salary <= 750.00)
+        else if (salario >= 450.00 && salario <= 750.00)
         {
-            printf("Your new salary is $%.2f\n", salary + 75);
+            printf("Seu novo salário é R$%.2f\n", salario + 75);
         }
         else
         {
-            printf("Your new salary is $%.2f\n", salary + 100);
+            printf("Seu novo salário é R$%.2f\n", salario + 100);
         }
         break;
 
     case 3:
-        printf("===============Insert your salary=============== \n");
-        printf("Salary: ");
-        scanf("%f", &salary);
+        printf("===============Insira seu salário=============== \n");
+        printf("Salário: ");
+        scanf("%f", &salario);
 
-        if (salary <= 700.00)
+        if (salario <= 700.00)
         {
-            printf("Category: Underpaid\n");
+            printf("Categoria: Mal remunerado\n");
         }
         else
         {
-            printf("Category: Well paid\n");
+            printf("Categoria: Bem remunerado\n");
         }
 
         break;
 
     default:
-        printf("INVALID CODE!\n");
+        printf("CÓDIGO INVÁLIDO!\n");
         break;
     }
     printf("\n");

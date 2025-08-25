@@ -2,35 +2,35 @@
 
 int main()
 {
-    float labAssignment, finalTest, semesterTest, average;
+    float trabalho_laboratorio, prova_final, prova_semestre, media;
 
-    printf("Insert the values for laboratory assignment final test and semester test\n");
+    printf("Insira os valores para trabalho de laboratório, prova final e prova do semestre\n");
     printf("==========================\n");
 
-    printf("Enter the laboratory assignment value: ");
-    scanf("%f", &labAssignment);
+    printf("Digite o valor do trabalho de laboratório: ");
+    scanf("%f", &trabalho_laboratorio);
 
-    printf("Enter the final test value: ");
-    scanf("%f", &finalTest);
+    printf("Digite o valor da prova final: ");
+    scanf("%f", &prova_final);
 
-    printf("Enter the semester test value: ");
-    scanf("%f", &semesterTest);
+    printf("Digite o valor da prova do semestre: ");
+    scanf("%f", &prova_semestre);
 
-    average = ((labAssignment * 2) + (semesterTest * 3) + (finalTest * 5)) / 10;
+    media = ((trabalho_laboratorio * 2) + (prova_semestre * 3) + (prova_final * 5)) / 10;
 
     printf("==========================\n");
 
-    if (average >= 0.0 && average <= 4.99)
-        printf("Your final grade is E\n");
-    else if (average >= 5.0 && average <= 5.99)
-        printf("Your final grade is D\n");
-    else if (average >= 6.0 && average <= 6.99)
-        printf("Your final grade is C\n");
-    else if (average >= 7.0 && average <= 7.99)
-        printf("Your final grade is B\n");
+    if (media >= 0.0 && media <= 4.99)
+        printf("Sua nota final é E\n");
+    else if (media >= 5.0 && media <= 5.99)
+        printf("Sua nota final é D\n");
+    else if (media >= 6.0 && media <= 6.99)
+        printf("Sua nota final é C\n");
+    else if (media >= 7.0 && media <= 7.99)
+        printf("Sua nota final é B\n");
     else
     {
-        printf("Your Final grade is A\n");
+        printf("Sua nota final é A\n");
     }
 
     printf("==========================\n");
