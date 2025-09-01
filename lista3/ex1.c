@@ -6,9 +6,9 @@ int main()
 
     salario = salario + (salario*aumento);
 
-    int i =18;
+    int tempo = 2025 - 2007;
 
-    for ( i ; i < 18; i++)
+    for ( i = 0; i < tempo; i++)
     {
         aumento *= 2;
         salario = salario + (salario*aumento);
