@@ -14,15 +14,14 @@ int main()
     }
     else
     {
-        for (int i = 1; i <= n; i++)
+        for (int i = 2; i <= n; i++)
 
         {
             fat *= i;
-            denominador = 1.0/fat;
+            denominador = 1.0 / fat;
             e += denominador;
         }
-
     }
-   
+
     printf("O resultado é: %.8f\n", e);
 }

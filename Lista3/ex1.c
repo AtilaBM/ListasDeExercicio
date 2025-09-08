@@ -2,7 +2,7 @@
 
 int main()
 {
-    float salario = 10.00, aumento = 0.015;
+    float salario = 1000.00, aumento = 0.015;
 
     salario = salario + (salario * aumento);
     printf("2006: %.2f%% - Salário: R$%.2f\n", aumento * 100, salario);
