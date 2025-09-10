@@ -15,7 +15,7 @@ int main()
     }
 
     printf("\n============================\n");
-    printf("|  Valor  |   Fatorial    |\n");
+    printf("|  Valor  |   Fatorial |\n");
     printf("============================\n");
 
     for (int i = 0; i < n; i++)
