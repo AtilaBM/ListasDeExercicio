@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <conio.h>
 
 int binar(int a)
  {
@@ -21,7 +19,6 @@ int main()
     
    }while(a == 0);
    
-  printf("\n  %d", binar(a));
-  getch();
+  printf("\n  %d\n", binar(a));
   return 0;
 }

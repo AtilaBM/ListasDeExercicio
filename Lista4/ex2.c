@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <conio.h>
-#include <stdlib.h>
 
 int soma_intervalo(int a, int b)
 {
@@ -17,14 +15,14 @@ int soma_intervalo(int a, int b)
 int main()
 {
  int a, b;
- printf("Informe dois valores maiores que 0, sendo o primeiro menor que o segundo:\n");
+ printf("Informe dois valores maiores que 0, sendo o primeiro menor que o segundo: ");
  scanf("%d %d", &a, &b);
  
  if(a>0 && b>0)
- 	printf("O resultado da soma eh: %d", soma_intervalo(a,b));
+ 	printf("O resultado da soma eh: %d\n", soma_intervalo(a,b));
  else
-	printf("Valor invalido!");
+	printf("Valor invalido!\n");
  
- getch();
+
  return 0;
 }

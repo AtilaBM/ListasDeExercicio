@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <conio.h>
-#include <stdlib.h>
 
 int st(int a, int b, int c)
  {
@@ -29,18 +27,18 @@ int main()
   int a, b, c;
   
   do{
-     printf("Informe tres valores inteiros \n");
+     printf("Informe tres valores inteiros ");
      scanf("%d %d %d", &a , &b, &c);
      if (a < 1){
-     	printf ("O valor de a deve ser maior do que 1, digite novamente a");
+     	printf ("O valor de a deve ser maior do que 1, digite novamente a\n");
      	scanf("%d", &a);
 		}
   	}while (a < 1);
   
   //somatorio = st(a, b, c);
   //printf("A soma e = %d", somatorio);
-  printf("A soma e = %d", st(a, b, c));
-  getch();
+  printf("A soma e = %d\n", st(a, b, c));
+
   return 0;
 }
     
