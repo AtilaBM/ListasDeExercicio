@@ -10,13 +10,15 @@ deverá ser mostrado o valor geral das vendas e o valor da comissão que será p
 
 #include <stdio.h>
 
+#define TAM 10
+
 void objetos(int quant[], float values[]);
 void relatorio(int quant[], float values[]);
 
 int main()
 {
-    int quant[10];
-    float values[10];
+    int quant[TAM];
+    float values[TAM];
 
     objetos(quant, values);
     relatorio(quant, values);
@@ -26,7 +28,7 @@ int main()
 
 void objetos(int quant[], float values[])
 {
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < TAM; i++)
     {
         printf("Informe a quantidade vendida do objeto %d: ", i + 1);
         scanf("%d", &quant[i]);
@@ -44,7 +46,7 @@ void relatorio(int quant[], float values[])
 
     printf("\n========== RELATORIO ==========\n\n");
 
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < TAM; i++)
     {
         printf("===== Objeto %d ======\n", i + 1);
         printf("Quantidade vendida: %d\n", quant[i]);
@@ -53,7 +55,7 @@ void relatorio(int quant[], float values[])
         printf("\n");
     }
 
-    for (int j = 0; j < 10; j++)
+    for (int j = 0; j < TAM; j++)
     {
         total += (quant[j] * values[j]);
     }
@@ -61,7 +63,7 @@ void relatorio(int quant[], float values[])
     printf("\nTotal vendido é R$%.2f\n", total);
     printf("O vendedor receberá R$ %.2f de comissão, totalizando R$ %.2f no salário.\n\n", total * 0.05, 545.00 + total * 0.05);
 
-    for (int k = 0; k < 10; k++)
+    for (int k = 0; k < TAM; k++)
     {
         if (maior < quant[k])
         {

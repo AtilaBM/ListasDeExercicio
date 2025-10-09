@@ -5,13 +5,15 @@ poderão não ser completamente utilizados. */
 
 #include <stdio.h>
 
+#define TAM 8
+
 void getNums(int nums[]);
 void calc(int nums[]);
 
 int main()
 {
 
-    int nums[8];
+    int nums[TAM];
 
     getNums(nums);
     calc(nums);
@@ -21,7 +23,7 @@ int main()
 
 void getNums(int nums[])
 {
-    for (int i = 0; i < 8; i++)
+    for (int i = 0; i < TAM; i++)
     {
         printf("Valor %d: ", i + 1);
         scanf("%d", &nums[i]);
@@ -30,12 +32,12 @@ void getNums(int nums[])
 
 void calc(int nums[])
 {
-    int pos[8] = {0},
-        neg[8] = {0},
+    int pos[TAM] = {0},
+        neg[TAM] = {0},
         cpos=0,
         cneg=0;
 
-    for (int i = 0; i < 8; i++)
+    for (int i = 0; i < TAM; i++)
     {
         if (nums[i] < 0)
         {

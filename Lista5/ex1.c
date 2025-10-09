@@ -3,12 +3,14 @@ os números primos e suas respectivas posições */
 
 #include <stdio.h>
 
+#define TAM 9
+
 void getNum(int nums[]);
 void primos(int nums[]);
 
 int main()
 {
-    int nums[9];
+    int nums[TAM];
 
     getNum(nums);
     primos(nums);
@@ -18,7 +20,7 @@ int main()
 
 void getNum(int nums[])
 {
-    for (int i = 0; i < 9; i++)
+    for (int i = 0; i < TAM; i++)
     {
         printf("Valor %d: ", i + 1);
         scanf("%d", &nums[i]);
@@ -27,7 +29,7 @@ void getNum(int nums[])
 
 void primos(int nums[])
 {
-    for (int i = 0; i < 9; i++)
+    for (int i = 0; i < TAM; i++)
     {
         int count = 0;
 

@@ -3,14 +3,16 @@ vetor resultante da intercalação.*/
 
 #include <stdio.h>
 
+#define TAM 10
+
 void getVet(int vet1[], int vet2[]);
 void intercala(int vet1[], int vet2[]);
 
 int main()
 {
 
-    int vet1[10],
-        vet2[10];
+    int vet1[TAM],
+        vet2[TAM];
 
     getVet(vet1, vet2);
     intercala(vet1, vet2);
@@ -20,14 +22,14 @@ int main()
 
 void getVet(int vet1[], int vet2[])
 {
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < TAM; i++)
     {
         printf("Valor %d do vetor 1: ", i + 1);
         scanf("%d", &vet1[i]);
     }
     printf("\n\n");
 
-    for (int j = 0; j < 10; j++)
+    for (int j = 0; j < TAM; j++)
     {
         printf("Valor %d do vetor 2: ", j + 1);
         scanf("%d", &vet2[j]);
@@ -39,7 +41,7 @@ void intercala(int vet1[], int vet2[])
     int count = 0,
         vetAux[20];
 
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < TAM; i++)
     {
         vetAux[count] = vet1[i];
         vetAux[count + 1] = vet2[i];
