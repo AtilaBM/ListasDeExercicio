@@ -13,7 +13,6 @@ int main()
     int vetor[TAM];
 
     getNums(vetor);
-   
 
     return 0;
 }
@@ -40,6 +39,5 @@ void getNums(int vetor[])
     {
         printf("%d ", vetor[j]);
     }
-    printf("]");
+    printf("]\n\n");
 }
-
