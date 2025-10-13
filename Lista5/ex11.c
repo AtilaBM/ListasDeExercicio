@@ -8,43 +8,47 @@ linha correspondente e mostrar a matriz resultante.*/
 #define LIN 3
 #define COL 4
 
-void preencheMatrix(int matrix[LIN][COL]);
-void somaLinha(int matrix[LIN][COL],int sum[LIN]);
+void preencheMatriz(int matriz[LIN][COL]);
+void somaLinha(int matriz[LIN][COL], int sum[LIN]);
+void multiplica(int matriz[LIN][COL], int sum[LIN], int mult[LIN][COL]);
 
 int main()
 {
 
-    int matrix[LIN][COL],
-        sum[LIN] = {0};
+    int matriz[LIN][COL],
+        sum[LIN] = {0},
+        mult[LIN][COL] = {0};
 
-    preencheMatrix(matrix);
-    somaLinha(matrix,sum);
+    preencheMatriz(matriz);
+    somaLinha(matriz, sum);
+    multiplica(matriz, sum, mult);
 
     return 0;
 }
 
-void preencheMatrix(int matrix[LIN][COL])
+void preencheMatriz(int matriz[LIN][COL])
 {
     for (int i = 0; i < LIN; i++)
     {
         for (int k = 0; k < COL; k++)
         {
             printf("Insira o valor da linha %d da coluna %d: ", i + 1, k + 1);
-            scanf("%d", &matrix[i][k]);
+            scanf("%d", &matriz[i][k]);
         }
+        printf("\n");
     }
     printf("\n");
     for (int i = 0; i < LIN; i++)
     {
         for (int k = 0; k < COL; k++)
         {
-            printf("valor da matrix[%d][%d] eh %d: \n", i + 1, k + 1, matrix[i][k]);
+            printf("valor da matriz[%d][%d] eh %d: \n", i + 1, k + 1, matriz[i][k]);
         }
         printf("\n");
     }
 }
 
-void somaLinha(int matrix[LIN][COL],int sum[LIN])
+void somaLinha(int matriz[LIN][COL], int sum[LIN])
 {
     int count = 0;
 
@@ -53,10 +57,34 @@ void somaLinha(int matrix[LIN][COL],int sum[LIN])
     {
         for (int k = 0; k < COL; k++)
         {
-            sum[count] += matrix[i][k];
+            sum[count] += matriz[i][k];
         }
         printf("Soma da linha %d: %d\n", i + 1, sum[count]);
         count++;
     }
     printf("\n");
+}
+
+void multiplica(int matriz[LIN][COL], int sum[LIN], int mult[LIN][COL])
+{
+    for (int i = 0; i < LIN; i++)
+    {
+        for (int j = 0; j < COL; j++)
+        {
+
+            mult[i][j] = matriz[i][j] * sum[i];
+        }
+    }
+
+    printf("\nResultado da multiplicacao: \n");
+
+    for (int i = 0; i < LIN; i++)
+    {
+        for (int k = 0; k < COL; k++)
+        {
+
+            printf("Matriz da multiplacao[%d][%d]: %d\n", i + 1, k + 1, mult[i][k]);
+        }
+        printf("\n");
+    }
 }
